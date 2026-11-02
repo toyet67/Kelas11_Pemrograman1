@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tampilan Website Responsif</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+
+        header {
+            background-color: #955;
+            color: rgb(254, 252, 252);
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: antiquewhite;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .main-content{
+            flex: 70px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        .main-content h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        .main-content p {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+
+        .sidebar {
+            flex: 30%;
+            padding: 30px;
+            box-sizing: border-box;
+            border-left: 1px solid #eee;
+            min-width: 250px;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+        .sidebar ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: rgb(3, 3, 3);
+            color: azure;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        @media (max-widht: 768px){
+            .containe {
+                flex-direction: column;
+            }
+            .main-content,
+            .sidebar{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Belajar Pemograman I</h1>
+        <p>Selamat datang di kursus pemograman pertama anda </p>
+    </header>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Kursus</a>
+        <a href="#">Kontak</a>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Selamat datang di Kursus Pemograman</h2>
+            <p>
+                Ini adalah kursus pemograman pertama anda, yang akan membantu anda memahami dasar-dasar pemograman. Kami akan mempelajari berbagai bahasa pemograman, konsep dasar, dan cara memulai menjadi seorang pengembang perangkat lunak
+            </p>
+        </div>
+        <div class="sidebar">
+            <h3>Bar Samping</h3>
+            <ul>Modul 1: Pengenalan HTML</ul>
+            <ul>Modul 2: Dasar CSS</ul>
+            <ul>Modul 3: Belajar JavaScript</ul>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 Belajar Pemograman I. Hak Cipta Dilindungi
+    </footer>
+</body>
+</html>
