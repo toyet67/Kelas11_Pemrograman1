@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f1f5f9;
+    --surface: #ffffff;
+    --surface-alt: #e2e8f0;
+    --ink: #0f172a;
+    --ink-muted: #64748b;
+    --accent: #4f46e5;
+    --accent-hover: #4338ca;
+    --accent-soft: #e0e7ff;
+    --forest: #0f766e;
+    --border: #cbd5e1;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header full-bleed dengan container proporsional */
+header {
+    background-color: var(--ink);
+    color: var(--bg);
+    padding: 18px max(24px, calc((100vw - 1040px) / 2));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 3px solid var(--accent);
+}
+
+header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+nav a {
+    display: inline-block;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 999px;
+    transition: all 0.15s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+nav a[aria-current="page"] {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+/* Container utama */
+main {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    flex: 1;
+}
+
+/* Kartu seksi dasar */
+section {
+    background-color: var(--surface);
+    border: 1.5px solid var(--ink);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 6px 6px 0 var(--border);
+}
+
+section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0 0 12px;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+}
+
+section p {
+    margin: 0;
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+}
+
+/* Layout Beranda: Hero & Info Banner */
+main:not(:has(table)):not(:has(form)) section:first-of-type {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    padding: 44px;
+}
+
+main:not(:has(table)):not(:has(form)) section:first-of-type h2::before {
+    content: "WORKSHOP SATU HARI • 2026";
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+main:not(:has(table)):not(:has(form)) section:first-of-type h2 {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+}
+
+/* Ketika gambar aula sudah ditambahkan ke Beranda -> otomatis 2 kolom */
+main:not(:has(table)):not(:has(form)) section:first-of-type:has(img) {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 16px 40px;
+    align-items: center;
+}
+
+main:not(:has(table)):not(:has(form)) section:first-of-type:has(img) h2 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    margin-bottom: 0;
+}
+
+main:not(:has(table)):not(:has(form)) section:first-of-type:has(img) p {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+}
+
+main:not(:has(table)):not(:has(form)) section:first-of-type:has(img) img {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin: 0;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Seksi kedua pada Beranda (Waktu & Tempat) */
+main:not(:has(table)):not(:has(form)) section:nth-of-type(2) {
+    background-color: var(--forest);
+    color: var(--bg);
+    border-color: var(--ink);
+    box-shadow: 6px 6px 0 var(--accent);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 28px 44px;
+}
+
+main:not(:has(table)):not(:has(form)) section:nth-of-type(2) h2 {
+    color: #ffffff;
+    font-size: 1.35rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+main:not(:has(table)):not(:has(form)) section:nth-of-type(2) h2::before {
+    content: "JADWAL PELAKSANAAN";
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    background-color: var(--accent);
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.08em;
+}
+
+main:not(:has(table)):not(:has(form)) section:nth-of-type(2) p {
+    color: #e2e8f0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+}
+
+/* Layout Halaman Jadwal: 2 Kolom Asimetris (Sidebar Materi + Tabel Acara) */
+main:has(table) {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+main:has(table) section {
+    margin-bottom: 0;
+}
+
+main:has(table) section:first-of-type {
+    background-color: var(--surface-alt);
+}
+
+main:has(table) section:first-of-type h2::before {
+    content: "KURIKULUM";
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+main:has(table) section:nth-of-type(2) h2::before {
+    content: "AGENDA SESI";
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+/* Penomoran otomatis daftar materi */
+section ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: grid;
+    gap: 12px;
+    counter-reset: materi;
+}
+
+section ul li {
+    counter-increment: materi;
+    background-color: var(--surface);
+    border: 1.5px solid var(--ink);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+section ul li::before {
+    content: "0" counter(materi);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    background-color: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Gambar pada halaman */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 16px 0 22px;
+    border: 1.5px solid var(--ink);
+}
+
+/* Tabel jadwal modern */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 8px;
+    border: 1.5px solid var(--ink);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+thead th {
+    background-color: var(--ink);
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+thead th:first-child {
+    border-top-left-radius: 9px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 9px;
+}
+
+tbody th {
+    font-weight: 700;
+    color: var(--ink);
+    background-color: #f8fafc;
+}
+
+tbody tr:last-child th:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+tbody td:nth-child(2) {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Layout Halaman Form Pendaftaran */
+main:has(form) {
+    max-width: 780px;
+}
+
+main:has(form) section h2::before {
+    content: "REGISTRASI PESERTA";
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+form {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+form p {
+    margin: 0;
+    color: var(--ink);
+    font-size: 0.95rem;
+}
+
+/* Sejajarkan Semester di sebelah Pilihan sesi pada baris ke-2 */
+form p:has(input[type="number"]) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* Field yang melebar penuh 2 kolom */
+form p:has(input[type="radio"]),
+form p:has(textarea),
+form p:has(button) {
+    grid-column: 1 / -1;
+}
+
+label,
+form p > span {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: var(--ink);
+}
+
+/* Radio button sebagai kartu pilihan interaktif */
+form p:has(input[type="radio"]) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+form p:has(input[type="radio"]) > span {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+form p > label:has(input[type="radio"]) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    margin: 0;
+    padding: 12px 16px;
+    background-color: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form p > label:has(input[type="radio"]:checked) {
+    background-color: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+input[type="radio"] {
+    accent-color: var(--accent);
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--ink);
+    background-color: var(--bg);
+    border: 1.5px solid var(--ink);
+    border-radius: 10px;
+    transition: box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: var(--accent);
+    box-shadow: 3px 3px 0 var(--accent);
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 14px 24px;
+    border: 1.5px solid var(--ink);
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 var(--ink);
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-hover);
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 var(--ink);
+}
+
+footer {
+    background-color: var(--surface-alt);
+    border-top: 1.5px solid var(--border);
+    padding: 22px max(24px, calc((100vw - 1040px) / 2));
+    color: var(--ink-muted);
+    font-size: 0.88rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    main:not(:has(table)):not(:has(form)) section:first-of-type:has(img),
+    main:has(table),
+    form,
+    form p:has(input[type="radio"]) {
+        grid-template-columns: 1fr;
+    }
+
+    main:not(:has(table)):not(:has(form)) section:first-of-type:has(img) img,
+    form p:has(input[type="number"]) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
