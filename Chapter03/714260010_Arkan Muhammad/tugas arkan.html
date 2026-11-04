@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kopi Gemoy - Menu &amp; Pemesanan</title>
+</head>
+<body>
+
+<header>
+    <h1>Kopi Gemoy</h1>
+    <p><em>Tempat nongki anak muda</em></p>
+    <nav>
+        <ul>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#menu">Menu &amp; Pemesanan</a></li>
+            <li><a href="#data-pesanan">Data Pesanan</a></li>
+        </ul>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+
+    <section id="tentang">
+        <h2>Tentang Kami</h2>
+        <p>
+            Kopi Gemoy adalah kafe kecil yang menyajikan kopi Murah meriah 
+	    dikalangan anak Muda.
+        </p>
+        <figure>
+            <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=480&q=80"
+                 alt="Suasana dalam kafe Kopi Gemoy"
+                 width="480">
+            <figcaption>Suasana hangat di dalam Kopi Gemoy.</figcaption>
+        </figure>
+    </section>
+
+    <hr>
+
+    <section id="menu">
+        <h2>Menu &amp; Pemesanan</h2>
+
+        <form action="#data-pesanan" method="get" id="formPesan">
+
+            <fieldset>
+                <legend>Data Pemesan</legend>
+                <p>
+                    <label for="nama">Nama:</label><br>
+                    <input type="text" id="nama" name="nama" placeholder="Nama Anda" required size="40">
+                </p>
+                <p>
+                    <label for="meja">Nomor Meja:</label><br>
+                    <input type="number" id="meja" name="meja" min="1" max="50" required>
+                </p>
+            </fieldset>
+
+            <h3>Daftar Menu</h3>
+            <p>
+                Centang menu yang ingin dipesan, isi jumlahnya, lalu tekan tombol
+                <strong>Pesan</strong>. Tombol <strong>Clear</strong> mengosongkan
+                seluruh isian form.
+            </p>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Menu</th>
+                        <th>Kategori</th>
+                        <th>Harga</th>
+                        <th>Jumlah</th>
+                        <th>Pilih</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Espresso</td>
+                        <td>Kopi</td>
+                        <td>Rp 18.000</td>
+                        <td><input type="number" name="qty_espresso" min="1" max="99" value="1" size="3"></td>
+                        <td><input type="checkbox" name="menu_espresso" value="Espresso - Rp 18.000"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Cappuccino</td>
+                        <td>Kopi</td>
+                        <td>Rp 25.000</td>
+                        <td><input type="number" name="qty_cappuccino" min="1" max="99" value="1" size="3"></td>
+                        <td><input type="checkbox" name="menu_cappuccino" value="Cappuccino - Rp 25.000"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Caff&egrave; Latte</td>
+                        <td>Kopi</td>
+                        <td>Rp 28.000</td>
+                        <td><input type="number" name="qty_latte" min="1" max="99" value="1" size="3"></td>
+                        <td><input type="checkbox" name="menu_latte" value="Caffe Latte - Rp 28.000"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Matcha Latte</td>
+                        <td>Non-Kopi</td>
+                        <td>Rp 30.000</td>
+                        <td><input type="number" name="qty_matcha" min="1" max="99" value="1" size="3"></td>
+                        <td><input type="checkbox" name="menu_matcha" value="Matcha Latte - Rp 30.000"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <button type="submit">Pesan</button>
+                &nbsp;&nbsp;
+                <button type="reset">Clear</button>
+            </p>
+
+        </form>
+
+    </section>
+
+</main>
+
+</body>
+</html>
