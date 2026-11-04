@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Daftar - Workshop web</title>
+</head>
+<body>
+    <header>
+     <h1>Workshop Web</h1>
+        <nav aria-label="Navigasi Utama">
+            <ul>
+                <li><a href="Index.html">Beranda</a></li>
+                <li><a href="Jadwal.html">Jadwal</a></li>
+                <li><a href="Daftar.html"aria-current="page">Daftar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="konten">
+        <section>
+            <h2>Form pendaftaran</h2>
+            <form action="" method="">
+                <p>
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" required minlength="3" placeholder="Tulis Nama Lengkap">
+                </p>
+                <p>
+                    <label for="hp">Nomor HP</label>
+                    <input type="tel" id="hp" name="hp" required minlength="[0-9]{10,14}" placeholder="Contoh 081234567890">
+                </p>
+                <p>
+                    <label for="sesi">Pilihan sesi</label>
+                    <select name="sesi" id="sesi" required>
+                        <option value="">Pilih satu sesi</option>
+                        <option value="html">HTML Semantik</option>
+                        <option value="css">CSS Dasar</option>
+                        <option value="git">Git dan Publikasi</option>
+                    </select>
+                </p>
+                <p>
+                    <span>Kehadiran</span>
+                    <label><input type="radio" name="hadir" value="luring" checked>Tatap Muka</label>
+                    <label><input type="radio" name="hadir" value="daring">Online</label>
+                </p>
+                <p>
+                    <label for="semester">Semester</label>
+                    <input type="number" id="semester" min="1" max="1" value="1" required>
+                </p>
+                <p>
+                    <label for="catatan">Catatan</label>
+                    <textarea name="catatan" id="catatan" rows="3" placeholder="Contoh butuh colokan listrik"></textarea>
+                </p>
+                <p>
+                    <button type="submit">Kirim pendaftaran</button>
+                </p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Workshop Web. Aula Gedung B Kampus. Kontak panitia 0857-0000-0000</p>
+    </footer>
+</body>
+</html>
