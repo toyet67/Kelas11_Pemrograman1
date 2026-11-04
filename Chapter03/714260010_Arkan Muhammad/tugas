@@ -1,0 +1,34 @@
+
+import random
+
+# Komputer memilih angka acak dari 1 sampai 100
+angka_rahasia = random.randint(1, 100)
+jumlah_tebakan = 0
+
+print("=== GAME TEBAK ANGKA ===")
+print("Saya memilih angka dari 1 sampai 100.")
+print("Coba tebak angka tersebut!")
+
+while True:
+    try:
+        tebakan = int(input("\nMasukkan tebakan kamu: "))
+    except ValueError:
+        print("Masukkan angka yang valid!")
+        continue
+
+    if tebakan < 1 or tebakan > 100:
+        print("Angka harus antara 1 sampai 100!")
+        continue
+
+    jumlah_tebakan += 1
+
+    if tebakan < angka_rahasia:
+        print("Terlalu kecil! Coba lagi.")
+    elif tebakan > angka_rahasia:
+        print("Terlalu besar! Coba lagi.")
+    else:
+        print(f"Benar! Angkanya adalah {angka_rahasia}.")
+        print(f"Kamu berhasil dalam {jumlah_tebakan} tebakan.")
+        break
+
+print("Terima kasih sudah bermain!")

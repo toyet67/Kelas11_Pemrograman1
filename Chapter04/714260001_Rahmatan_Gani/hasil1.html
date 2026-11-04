@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        header {
+            background-color: aqua;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: blueviolet;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: brown;
+            padding: 15px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .main-content {
+            flex: 70%;
+        }
+
+        .sidebar {
+            flex: 30%;
+        }
+
+        footer {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 10px ;
+        }
+
+        @media (max-width: 770px) {
+            .container {
+                flex-direction: column;
+            }
+            .main-content, .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>By Rahmatan Gani</h1>
+    </header>
+        <nav>
+            <a href="#">Beranda</a>
+            <a href="#">Tentang kami</a>
+            <a href="#">Layanan</a>
+            <a href="#">kontak</a>
+        </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>HALOOOOO Selamat datang </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus totam repellendus sunt quas eaque accusantium!
+            </p>
+        </div>
+        <div class="sidebar">
+            <h3>Orang aneh</h3>
+            <ul>
+                <li>Paijo</li>
+                <li>Ataya</li>
+                <li>Arsi</li>
+                <li>hapis</li>
+            </ul>
+        </div>
+    </div>
+    <footer>Website menjelaskan kenapa teman saya aneh</footer>
+</body>
+</html>
