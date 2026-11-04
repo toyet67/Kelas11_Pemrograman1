@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Pemrograman I</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+
+        header {
+            background-color: blue;
+            color: whitesmoke;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+        }
+
+        nav a { 
+            text-decoration: none;
+            color: whitesmoke;
+            padding: 10px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: azure;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .main-content {
+            flex: 70%;
+        }
+
+        .sideber {
+            flex: 30%;
+        }
+
+        footer {
+            background-color: brown;
+            color: whitesmoke;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsivensess */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .main-content,
+            .sideber {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Belajar Pemrograman I</h1>
+        <p>Selamat datang di kursus pemrograman pertama anda.</p>
+    </header>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Kursus</a>
+        <a href="#">Kontak</a>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Selamat datang di kursus Pemrograman I</h2>
+            <p>
+                Ini adalah kursus pemrograman pertama anda, yang akan membantu anda
+                memahami dasar-dasar pemrograman. Kami akan mempelajari berbagai
+                bahasa pemrograman, konsep dasar, dan cara memulai menjadi seorang 
+                pengembang perangkat lunak.
+            </p>
+    </div>
+    <div class="sidebar">
+        <h3>Bar Samping</h3>
+        <ul>
+            <li>Modul 1: Pengenalan HTML</li>
+            <li>Modul 2: Dasar CSS</li>
+            <li>Modul 1: Belajar JavaScript</li>
+        </ul>
+    </div>
+     </div>
+
+    <footer>
+        <p>&copy; 2023 Belajar Pemrograman I. Hak Cipta Dilindungi.</p>
+    </footer>
+</body>
+</html>
