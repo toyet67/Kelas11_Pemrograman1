@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+header {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #3b82f6;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 24px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* Efek saat menu diarahkan mouse */
+nav a:hover {
+    background-color: #1d4ed8;
+}
+
+/* Tata Letak Konten */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+/* Kotak Konten dibuat ada bayangannya */
+.content {
+    width: 45%;
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color: #1e293b;
+    margin-top: 0;
+}
+
+.content p, .content ul {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Footer Hitam Modern */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
