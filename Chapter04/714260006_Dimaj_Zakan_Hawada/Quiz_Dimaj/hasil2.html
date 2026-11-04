@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Pemrograman</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 20px 0 30px;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Navigasi */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #27ae60;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            background-color: #219150;
+        }
+
+        /* Kontainer utama */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 7px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Konten utama */
+        .main-content {
+            flex: 3;
+            min-width: 280px;
+        }
+
+        .main-content h2 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .sidebar h3 {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+
+        .sidebar ul {
+            padding-left: 25px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        /* Tampilan responsif */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 20px 12px;
+                padding: 20px;
+            }
+
+            .main-content,
+            .sidebar {
+                width: 100%;
+                min-width: 0;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            nav a {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Belajar Pemrograman I</h1>
+        <p>Selamat datang di kursus pemrograman pertama Anda.</p>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Kursus</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <!-- Konten utama dan sidebar -->
+    <div class="container">
+
+        <div class="main-content">
+            <h2>Selamat datang di Kursus Pemrograman I</h2>
+
+            <p>
+                Ini adalah kursus pemrograman pertama Anda, yang akan
+                membantu Anda memahami dasar-dasar pemrograman.
+                Kami akan mempelajari berbagai bahasa pemrograman,
+                konsep dasar, dan cara memulai menjadi seorang
+                pengembang perangkat lunak.
+            </p>
+        </div>
+
+        <div class="sidebar">
+            <h3>Bar Samping</h3>
+
+            <ul>
+                <li>Modul 1: Pengenalan HTML</li>
+                <li>Modul 2: Dasar CSS</li>
+                <li>Modul 3: Belajar JavaScript</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 Belajar Pemrograman I. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>

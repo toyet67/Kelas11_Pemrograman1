@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+
+    <h2>Kalkulator Sederhana</h2>
+
+    <form id="formKalkulator">
+        <label>Angka pertama:</label><br>
+        <input type="number" id="angka1" step="any" required>
+        <br><br>
+
+        <label>Angka kedua:</label><br>
+        <input type="number" id="angka2" step="any" required>
+        <br><br>
+
+        <label>Operasi:</label><br>
+        <select id="operasi">
+            <option value="tambah">Penjumlahan (+)</option>
+            <option value="kurang">Pengurangan (-)</option>
+            <option value="kali">Perkalian (*)</option>
+            <option value="bagi">Pembagian (/)</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Hitung</button>
+    </form>
+
+    <h3>Hasil Perhitungan</h3>
+    <p id="hasil">Hasil akan muncul di sini.</p>
+
+    <script>
+        const form = document.getElementById("formKalkulator");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const angka1 = Number(document.getElementById("angka1").value);
+            const angka2 = Number(document.getElementById("angka2").value);
+            const operasi = document.getElementById("operasi").value;
+            const hasil = document.getElementById("hasil");
+
+            let perhitungan;
+            let simbol;
+
+            if (operasi === "tambah") {
+                perhitungan = angka1 + angka2;
+                simbol = "+";
+            } else if (operasi === "kurang") {
+                perhitungan = angka1 - angka2;
+                simbol = "-";
+            } else if (operasi === "kali") {
+                perhitungan = angka1 * angka2;
+                simbol = "*";
+            } else if (operasi === "bagi") {
+                if (angka2 === 0) {
+                    hasil.textContent =
+                        "Tidak bisa membagi dengan angka nol.";
+                    return;
+                }
+
+                perhitungan = angka1 / angka2;
+                simbol = "/";
+            }
+
+            hasil.textContent =
+                "Angka pertama: " + angka1 +
+                " | Operasi: " + simbol +
+                " | Angka kedua: " + angka2 +
+                " | Hasil: " + perhitungan;
+        });
+    </script>
+
+</body>
+</html>
