@@ -1,0 +1,59 @@
+
+body {
+    background-color: #1e1b2e;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #302746;
+    padding: 15px;
+    text-align: right;
+}
+
+.a-navbar {
+    color: #A7C7E7;
+    text-decoration: none;
+}
+
+/* Halaman utama */
+.container {
+    background-color: #29243d;
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #A7C7E7;
+}
+
+/* Daftar lagu */
+.lagu {
+    text-align: left;
+    margin-top: 30px;
+}
+
+h2 {
+    color: #A7C7E7;
+}
+
+.judul-lagu {
+    background-color: #3a304e;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.judul-lagu a {
+    color: #A7C7E7;
+    text-decoration: none;
+}
+
+.judul-lagu a:hover {
+    color: white;
+}
