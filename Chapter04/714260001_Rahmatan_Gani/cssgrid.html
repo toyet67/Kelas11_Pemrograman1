@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS gird dan selector</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .item {
+            background-color: blue;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        .special {
+            background-color: tomato;
+        }
+        #unik {
+            background-color: aquamarine;
+        }
+        .container p {
+            font-style: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS GRID DAN SELECTOR</h1>
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="special item">item 3 spesial</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item" id="unik">item 6 unk</div>
+    </div>
+    <p>ini adalah contoh text dalam container</p>
+    <p>ini adalah contoh text luar container</p>
+</body>
+</html>

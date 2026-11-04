@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Nilai Ujian</title>
+</head>
+<body>
+    <h2>Program Nilai Ujian</h2>
+
+    <form id="formNilai">
+        <label>Nama siswa:</label><br>
+        <input type="text" id="nama" required>
+        <br><br>
+
+        <label>Nilai ujian (0-100):</label><br>
+        <input type="number" id="nilai" min="0" max="100" required>
+        <br><br>
+
+        <button type="submit">Hitung Nilai</button>
+    </form>
+
+    <h3>Hasil Ujian</h3>
+    <p id="hasil">Hasil akan muncul di sini.</p>
+
+    <script>
+        const form = document.getElementById("formNilai");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nama = document.getElementById("nama").value.trim();
+            const nilai = Number(document.getElementById("nilai").value);
+            const hasil = document.getElementById("hasil");
+
+            if (nama === "") {
+                hasil.textContent = "Nama siswa harus diisi.";
+                return;
+            }
+
+            if (
+                document.getElementById("nilai").value === "" ||
+                nilai < 0 ||
+                nilai > 100
+            ) {
+                hasil.textContent = "Nilai harus antara 0 sampai 100.";
+                return;
+            }
+
+            let keterangan;
+
+            if (nilai >= 75) {
+                keterangan = "LULUS";
+            } else {
+                keterangan = "TIDAK LULUS";
+            }
+
+            hasil.textContent =
+                "Nama: " + nama +
+                " | Nilai: " + nilai +
+                " | Keterangan: " + keterangan;
+        });
+    </script>
+</body>
+</html>
