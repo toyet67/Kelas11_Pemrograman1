@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - Work Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Workshop Web</h1>
+        <nav aria-label="Navigasi Utama">
+            <ul>
+                <li><a href="index.html"></a></li>
+                <li><a href="jadwal.html">Jadwal</a></li>
+                <li><a href="daftar.html" aria-current="page">Daftar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="konten">
+        <section>
+            <h2>Form Pendaftaran</h2>
+            <form action="" method="get">
+                <p>
+                    <label for="nama"> Nama</label>
+                    <input type="text" name="nama" id="nama" required minlength="3" placeholder="Tulis nama lengkap">
+                </p>
+                <p>
+                    <label for="hp">Nomor HP</label>
+                    <input type="tel" name="hp" id="hp" required pattern="[0-9]{10,14}" placeholder="contoh 081234567890">
+                </p>
+                <p>
+                    <label for="sesi">Pilihan Sesi</label>
+                    <select name="sesi" id="sesi">
+                        <option value="">Pilih satu sesi</option>
+                        <option value="html">HTML Semantik</option>
+                        <option value="css">CSS Dasar</option>
+                        <option value="git">Git dan Publikasi</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="semester">Semester</label>
+                    <input type="number" id="semester" name="semester" min="1" max="8" value="1" required>
+                </p>
+                <p>
+                    <label for="catatan">Catatan</label>
+                    <textarea name="catatan" id="catatan" rows="3" placeholder="Contoh butuh colokan listrik"></textarea>
+                </p>
+                <p>
+                    <button type="submit">Kirim Pendaftaran</button>
+                </p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Workshop Web. Aula Gedung B Kampus. Kontak panitia 0812-3456-7890</p>
+    </footer>
+</body>
+</html>

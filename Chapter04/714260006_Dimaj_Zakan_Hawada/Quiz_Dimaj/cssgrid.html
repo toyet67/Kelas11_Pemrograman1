@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid dan Selector</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .item {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Selector untuk elemen dengan class "special" */
+        .special {
+            background-color: #e74c3c;
+        }
+
+        /* Selector untuk elemen dengan id "unique" */
+        #unique {
+            background-color: #27ae60;
+        }
+
+        /* Selector untuk elemen <p> yang ada dalam class "container" */
+        .container p {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Grid dan Selector</h1>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item special">Item 3 (Spesial)</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item" id="unique">Item 6 (Unique)</div>
+    </div>
+
+    <p>Ini adalah contoh teks dalam class "container".</p>
+    <p>Ini adalah contoh teks di luar class "container".</p>
+</body>
+</html>
