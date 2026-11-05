@@ -6,14 +6,13 @@ Buatlah sebuah website sederhana menggunakan **HTML, CSS, dan JavaScript** denga
 ## Pilihan Tema
 Pilih salah satu tema berikut:
 
-1. Personal Portfolio
-2. Website Kuliner / Cafe
-3. Online Shop
-4. Travel & Wisata
-5. Education / E-Learning
-6. Event & Organization
-7. News Portal
-8. Expense Tracker
+1. Website Kuliner / Cafe
+2. Online Shop
+3. Travel & Wisata
+4. Education / E-Learning
+5. Event & Organization
+6. News Portal
+7. Expense Tracker
 
 ## Ketentuan Pengerjaan
 
