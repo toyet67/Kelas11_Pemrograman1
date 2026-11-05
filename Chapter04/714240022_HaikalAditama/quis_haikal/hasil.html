@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Responsif</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    header {
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #27ae60;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+    }
+    
+    nav a:hover {
+      background-color: #1e8449;
+    }
+    
+    /* Pembungkus utama untuk memisahkan kolom */
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Ini yang membuat ruang kosong di antara kedua kotak */
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    
+    /* Pengaturan masing-masing kotak agar ukurannya seimbang */
+    .content {
+      width: 48%; /* Mengambil 48% dari lebar layar agar tersisa 4% untuk jarak di tengah */
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Aturan responsif: Jika dibuka di layar HP, kolom akan tersusun ke bawah */
+    @media (max-width: 768px) {
+      .content {
+        width: 100%; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Selamat Datang di Website Kami</h1>
+  </header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Tentang Kami</a>
+    <a href="#">Layanan</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <main>
+    <!-- Kolom Kiri -->
+    <section class="content">
+      <h2>Tentang Kami</h2>
+      <p>
+        Kami adalah perusahaan yang berfokus pada pengembangan web dan teknologi.
+      </p>
+    </section>
+
+    <!-- Kolom Kanan -->
+    <section class="content">
+      <h2>Layanan Kami</h2>
+      <ul>
+        <li>Desain Web</li>
+        <li>Pengembangan Aplikasi</li>
+        <li>Optimisasi SEO</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Website Responsif. Hak Cipta Dilindungi.</p>
+  </footer>
+
+</body>
+</html>
